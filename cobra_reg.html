@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Lessons</title>
+        <link rel=stylesheet href='popup.css'>
+    </head>
+    <body>
+        <section id="header_container">
+            <header>
+                <p>"COBRA  KAI  NEVER  DIES"</p>
+            </header>
+        </section>
+        <section>
+            <main>
+                <nav>
+                    <ul>
+                        <a href="index.html"><li>Home</li></a>
+                        <a href="lessons.html"><li>Lessons</li></a>
+                        <a href="ccontact.html"><li>Contact</li></a>
+                    </ul>
+                </nav>
+                <section id="lessons_para">
+                    <p class="form_sheet">
+                        <label for="fname">First Name:</label>
+                        <input type="text" name="fname" placeholder="First Name" id="regfname" onclick="clearit()"/>
+                    </p>
+                    <p class="form_sheet">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" name="lname" placeholder="Last Name" id="reglname"/>
+                    </p>
+                    <p class="form_sheet">
+                        <label for="age">Age:</label>
+                        <input type="text" name="age" placeholder="Age" id="regage"/>
+                    </p>
+                    <p class="form_sheet">
+                        <label for="number">Contact Number:</label>
+                        <input type="text" name="number" placeholder="Contact Number" id="regnumber"/>
+                    </p>
+                    
+                    <section id="regcon">
+                        <p id="reg">
+                            <input type="submit" value="Register" id="regdone" onclick="vaildate()"/>
+                        </p>
+                    </section>
+                    <span id="dmessage">
+                    </span>
+                    <br>
+                    <div>
+                        <img src="snake.png" id="regpic" title="Cobra Kai" alt="Picture of the Cobra Kai cobra logo" onclick="tongue()"/>
+                    </div>
+                </section>
+            </main>
+        </section>
+    </body>
+    <script>
+        let fname = document.getElementById('regfname');
+        let lname = document.getElementById('reglname');
+        let dage = document.getElementById('regage');
+        let dnumber = document.getElementById('regnumber');
+        let dmessage = document.getElementById('dmessage');
+        let counter = 0;
+
+        let dsnake = document.getElementById('regpic');
+        let snakecounter = 0;
+
+        function vaildate() {
+            if (fname.value !== "" && lname.value !== "" && dage.value !== "" && dnumber.value !== "") {
+                if (fname.value !== "" && counter === 0) {
+                    dmessage.innerHTML += "Welcome to Cobra Kai " + fname.value;
+                    counter += 1;
+                } else {
+                    fname.placeholder = "*REQUIRED*"
+                }
+
+                if (lname.value !== "" && counter === 0) {
+                    dmessage.innerHTML += " " + lname.value;
+                    counter += 1;
+                } else {
+                    lname.placeholder = "*REQUIRED*"
+                }
+
+                if (dage.value === "" && counter === 0) {
+                    dage.placeholder = "*REQUIRED*";
+                    counter += 1;
+                }
+
+                if (dnumber.value === "" && counter === 0) {
+                    dnumber.placeholder = "*REQUIRED*";
+                    counter += 1;
+                }
+            } else {
+                if (counter === 0) {                //so the message can only appears once no matter how many clicks
+                    dmessage.innerHTML += "You must fill out the form fully"; 
+                    fname.placeholder = "*REQUIRED*"  
+                    lname.placeholder = "*REQUIRED*"
+                    dage.placeholder = "*REQUIRED*";
+                    dnumber.placeholder = "*REQUIRED*";
+                    counter += 1;
+                }
+            }
+        }
+
+        function tongue() {
+            if (snakecounter % 2 === 0) {
+                dsnake.src = "snake1.png";
+                snakecounter += 1;
+            } else {
+                dsnake.src = "snake.png";
+                snakecounter += 1;
+            }
+        }
+
+        function clearit() {                   //clears the span if first attempt is unsuccessful
+            dmessage.innerHTML = "";
+        }
+    </script>

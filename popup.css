@@ -1,0 +1,264 @@
+body {
+    background-image: url('cobrakai.jpg');
+    color: white;
+}
+
+                        /* "COBRA KAI NEVER DIES" */
+header{                              
+    background-color: black;
+    margin-left: 32%;
+    margin-right: 35%;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+main {
+    background-color: black;
+    border: red solid 2px;
+    margin-left: 20%;
+    margin-right: 24%;
+    padding-bottom: 50px;
+}
+
+.paars a {
+    color: red;
+}
+
+.paars a:hover {
+    color: gold;
+}
+
+#message {
+    padding: 10px;
+}
+
+#popup_container {
+    visibility: hidden;
+    text-align: center;
+    padding: 20px;
+    padding-top: 10px;
+    background-color: red;
+    border: black solid 5px;
+    border-radius: 10px;
+    margin-right: 430px;
+    margin-left: 420px;
+    animation-name: twirl;
+    animation-duration: 2s;
+    animation-iteration-count: 1;       
+}
+                                /* it not staying on page because of the javascript i wrote display none */
+@keyframes twirl {
+    0% {transform: rotate(180deg);}
+    100% {transform: rotae(0deg);}
+}
+
+
+                            /* The "x" */
+#x  {                               
+    width: 25px;
+    height: 25px;
+    float: right;
+    border: black 2px solid;
+    border-radius: 5px;
+}
+
+#popup_container #x {
+   display: inline;
+}
+
+#x:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    background-color: red;
+    border: red solid 1px;
+    padding-bottom: 2px;
+    border-bottom: solid rgb(224, 173, 3) 5px;
+}
+
+                /* this selects the GROUP of lis so its only selecting one thing */
+nav ul {
+    margin-left: 24%;
+}
+
+nav li {
+    display: inline;
+    padding: 13px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: 1px;
+    background-color: black;
+    border: black solid .5px;
+    border-radius: 0px;
+}
+
+nav li:hover {
+    background-color: rgb(190, 146, 2);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+main p, h2 {
+    text-align: center;
+}
+
+                        /* individual paragraphs */
+.paars {                
+    font-size: 18px;
+    padding: 10px;
+}
+
+                        /* johnny pic in mainn */
+main > picture, #johnny {           
+    margin-left: 17%;
+}
+
+#johnny {
+    border: red solid 5px;
+}
+
+#johnny:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    display: inline;
+}
+
+.cobra1 {
+    width: 10%;
+    padding: 10px;
+    padding-top: 100px;
+    float: left;
+}
+
+.cobra2 {
+    width: 10%;
+    padding: 10px;
+    padding-top: 100px;
+    float: right;
+}
+
+                                /* miguel and aisha */
+
+#instructs {
+    padding: 0px;
+}
+
+#instructs .instructors {
+    margin-right: 20px;
+    margin-left: 20px;
+    border: white solid 5px;
+}
+
+#instructs .instructors:hover {
+    transform: scale(1.1);
+}
+
+#lessons_para {
+    padding: 10px;
+    padding-bottom: 50px;
+} 
+
+.days {color: red}
+
+table {
+    border: white solid 2px;
+    margin-left: 7%;
+}
+
+td,th {
+    padding: 10px;
+}
+
+table:hover {
+    transform: scaleX(.9);
+}
+
+iframe {
+    width: 60%;
+    height: 300px;
+    margin-top: 15px;
+    margin-left: 19%;
+    border: red solid 5px;
+    border-right: dotted red 5px;
+    border-left: dotted red 5px;
+}
+
+/* next two selectors are to line the reg form up nicely */
+label {
+    margin-left: 235px;
+    padding: 10px;
+    float: left;
+}
+
+.form_sheet input {
+    margin-right: 160px;
+    padding: 10px;
+    float: right;
+}
+
+.form_sheet {
+    display: block;
+}
+
+
+#regcon {              
+    display: block;
+    margin-top: 200px;
+}
+
+/* #butlink id the register button on the pop up */
+#butlink {
+    background-color: white;
+    border: solid black 2px;
+    padding: 10px;
+}
+
+#butlink:hover {
+    transform: scale(1.08);
+}
+
+#dmessage {
+    margin-left: 30%;
+    font-size: 24px;
+}
+
+div {
+    padding-left: 205px;
+}
+
+#regpic {
+    margin-left: 10%;
+}
+
+#socials_container img:hover {
+    transform: scale(1.1);
+}
+
+#socials_container {
+    float: right;
+    padding-left: 20px;
+    margin-right: 70px;
+}
+
+#besidesocials {
+    float: left;
+    width: 46.5%;
+}
+
+#lesson_para {
+    padding: 10px;
+    padding-bottom: 140px;
+}
+
+.social {
+    padding: 20px;
+}

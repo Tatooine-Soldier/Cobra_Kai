@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Cobra Kai</title>
+        <link rel=stylesheet href='popup.css'>
+    </head>
+    <body>
+        <section id="big_container">
+            <section id="header_container">
+                <header>
+                    <p>"COBRA  KAI  NEVER  DIES"</p>
+                </header>
+            </section>
+            <section id="main_container">
+                    <section id="popup_container">
+                        <img src="exit.jpg" title="exit" id="x" onclick="vanish()"/>
+                        <h1>ATTENTION!</h1>
+                        <p>WE ARE NOW RECRUITING! <br>JOIN TODAY!</p>
+                        <a href="cobra_reg.html"><input type="submit" id="butlink" value="REGISTER"/></a>
+
+                        <!-- <input type="text" name="student" placeholder="Name" id="ask"/>
+                        <input type="submit" name="sub" value="Register" id="subbut" onclick="check()"/><br>
+                        <span id="message"></span> -->
+
+                    </section>
+            </section>
+            <section>
+                <main>
+                    <nav>
+                        <ul>
+                            <a href="index.html"><li>Home</li></a>
+                            <a href="lessons.html"><li>Lessons</li></a>
+                            <a href="ccontact.html"><li>Contact</li></a>
+                        </ul>
+                    </nav>
+                    <h2>Welcome to Cobra Kai Karate</h2>
+                    <p class="paars">Have you ever felt weak? Have you ever been a loser? Are you loser? </p>
+                    <p class="paars">Well now you can change all that by joining Cobra Kai karate based in Resseeda CA. We can train you in the ways of karate,
+                        through our intense weekly lessons from Cobra Kai Dojo(<a href="">Find out more</a>). Sensai Johnny Lawrence demonstrates the ways of Karate to his students. He 
+                        ensures 100% that all students who participate will <i>be changed forever and will fight like real men in future</i>.</p>
+                    <p class="paars">Become the strong individual you have always wanted to be. Show those who put you down in the past 
+                        that you can fight back. But most importantly, <em>SHOW NO MERCY!</em>
+                    </p>
+
+                    <picture>
+                        <p>Sensai Lawrence</p>
+                        <img src="johnny.jpg" title="sensai" alt="picture of sensai Johnny Lawrence" id="johnny"/>
+                    </picture>
+
+                    <footer>
+                        <img src="snake.png" title="cobra" class="cobra1" id="cobra1" onclick='change()'/>
+                        <img src="snake.png" title="cobra" class="cobra2" id="cobra2" onclick='change()'/>
+                    </footer>
+                </main>
+            </section>
+        </section>
+    </body>
+    <script>
+        let appear = document.getElementById('popup_container');
+        let exit = document.getElementById('x');
+        let ask = document.getElementById('ask');
+        let message = document.getElementById('message');
+        let snake1 = document.getElementById('cobra1');
+        let snake2 = document.getElementById('cobra2');
+
+        window.addEventListener('DOMContentLoaded', pop(), false);
+        window.setInterval(change, 3000);
+        
+
+        function pop() {
+            appear.style.visibility = 'visible';
+            setInterval(vanish, 50000);
+        }
+
+        function vanish() {
+            appear.style.display = "none";
+        }
+
+        function check() {
+            ask.value = ask.value.trim();
+            if (ask.value == "") {
+                ask.placeholder = "Please enter something";
+            } else {
+                message.innerHTML = "Welcome to Cobra Kai " + ask.value + " :)";
+            }
+        }
+
+        function changeback() {         //long-tongue to short
+            snake1.src = 'snake.png';
+            snake2.src = 'snake.png';
+            window.setInterval(change, 3000);
+        }
+
+        function change() {             //short-tongue to long
+            snake1.src = 'snake1.png';
+            snake2.src = 'snake1.png';
+            window.setInterval(changeback, 3000);
+        }
+    </script>
+
+</html>

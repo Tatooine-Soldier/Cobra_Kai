@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Lessons</title>
+        <link rel=stylesheet href='popup.css'>
+    </head>
+    <body>
+        <section id="header_container">
+            <header>
+                <p>"COBRA  KAI  NEVER  DIES"</p>
+            </header>
+        </section>
+        <section>
+            <main>
+                <nav>
+                    <ul>
+                        <a href="index.html"><li>Home</li></a>
+                        <a href="lessons.html"><li>Lessons</li></a>
+                        <a href="ccontact.html"><li>Contact</li></a>
+                    </ul>
+                </nav>
+                <section id="lessons_para">
+                    <h2>Lessons</h2>
+                    <p>Instructors</p>
+                    <p id="instructs"><img src="miguel.jpg" title="miguel" class="instructors"/> <img src="aisha.jpg" title="aisha" class="instructors"></p>
+                    <p>Our talented young instructors Miguel and Aisha will teach you the ways of Cobra Kai Karate. They will help you progress from weakness to brute strength. They are well experienced fighters,
+                        Miguel in fact, is the current All-Valley Karate Champion. You are in good hands here in Cobra Kai Karate unlike Miyagi-Do loser dojo.
+                    </p>
+                </section>
+                <hr>
+                <section id="lessons_para">
+                    <p>Times</p>
+                    <p>Our lessons take place in the Cobra Kai Dojo, Receeda, CA. Due to our recent reopening, we currently
+                        have only one class but tend to expand in the near future. Our current class has 20 members. Training takes 
+                        place Monday(6pm), Wednesday(4.30pm), Thursday(6pm) and Friday(4.30pm) evenings. 
+                        Sessions usually last for 1 or 1.5 hours. Students must attend at least 3 lessons per week if they want to get 
+                        the most out of their training.
+                    </p>
+                    <table id="dtable" onclick="headsup()">
+                        <tr id="ddays"><th>Day</th><td class="days">Monday</td><td class="days">Tuesday</td><td class="days">Wednesday</td><td class="days">Thursday</td><td class="days">Friday</td><td class="days">Saturday</td><td class="days">Sunday</td></tr>
+                        <tr id="dtimes"><th>Time</th><td>6pm</td><td>No Class</td><td>4.30pm</td><td>6pm</td><td>4.30pm</td><td>9am</td><td>No Class</td></tr>
+                    </table>
+                </section>
+                <hr>
+                <section id="lessons_para"> 
+                    <p>Why not take some time to watch our training video below as a demonstration into the techniques you will learn at Cobra Kai: </p>
+                    <iframe src="https://www.youtube.com/embed/AinnpKoBcSA" width="50%" height="250px" title="Karate demo" allowfullscreen="true">
+                    </iframe>
+                </section>
+            </main>
+        </section>
+    </body>
+    <script>
+        let table = document.getElementById('dtable');
+        let ddays = document.getElementById('ddays');
+        let dtimes = document.getElementById('dtimes');
+        let counter = 0;
+        function headsup() {            //changes the table colour when clicked on
+            if (counter % 2 === 0) {
+                dtimes.style.color = 'red';
+                ddays.style.color = 'white';
+                table.style.border = 'white solid 2px';
+                counter += 1;
+            } else {
+                dtimes.style.color = 'white';
+                ddays.style.color = 'red';
+                table.style.border = 'red solid 2px';
+                counter += 1;
+            } 
+        }
+    </script>
+</html>
